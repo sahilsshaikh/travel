@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact RK Tours & Travels for inquiries, bookings and travel information. Reach us by phone, email or visit our office.">
+  <title>Contact - RK Tours & Travels</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-plane-departure"></i>
+        RK Tours & Travels
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div>
+      <h1>Contact Us</h1>
+      <p>Get in touch for bookings and inquiries</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left Side - Info + Map -->
+        <div>
+          <h2 class="section-title fade-in" style="text-align: left; margin-bottom: 25px;">Get In Touch</h2>
+
+          <div class="contact-info-cards fade-in">
+            <div class="info-card">
+              <i class="fas fa-phone"></i>
+              <h4>Phone</h4>
+              <p>+91 XXXXX XXXXX</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <h4>Email</h4>
+              <p>info@rktours.com</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <h4>Office</h4>
+              <p>Mumbai, Maharashtra</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-clock"></i>
+              <h4>Working Hours</h4>
+              <p>Mon - Sat: 9AM - 7PM</p>
+            </div>
+          </div>
+
+          <div class="map-container fade-in">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+              title="RK Tours & Travels Office Location">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right Side - Form -->
+        <div class="contact-form fade-in">
+          <h3>Send Us a Message</h3>
+
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.
+          </div>
+
+          <form id="contactForm" action="https://formsubmit.co/info@rktours.com" method="POST">
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="#">
+
+            <div class="form-group" id="nameGroup">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name">
+              <div class="error-msg">Please enter your name</div>
+            </div>
+
+            <div class="form-group" id="phoneGroup">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number">
+              <div class="error-msg">Please enter a valid 10-digit phone number</div>
+            </div>
+
+            <div class="form-group" id="emailGroup">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email">
+              <div class="error-msg">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group" id="destinationGroup">
+              <label for="destination">Destination</label>
+              <select id="destination" name="destination">
+                <option value="">Select Destination</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Goa">Goa</option>
+                <option value="Kashmir">Kashmir</option>
+                <option value="Basic Package">Basic Package</option>
+                <option value="Standard Package">Standard Package</option>
+                <option value="Premium Package">Premium Package</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="messageGroup">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us about your travel plans..."></textarea>
+              <div class="error-msg">Please enter your message</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="trips.html">Trips</a>
+          <a href="packages.html">Packages</a>
+          <a href="documents.html">Documents</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+          <p><i class="fas fa-envelope"></i> info@rktours.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</p>
+        </div>
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 RK Tours & Travels. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>
