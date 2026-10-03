@@ -87,3 +87,18 @@ if (destinationParam && destinationSelect) {
     }
   }
 }
+
+// ---- Floating WhatsApp Button ----
+document.addEventListener('DOMContentLoaded', function () {
+  if (!document.querySelector('.whatsapp-float')) {
+    var waFloat = document.createElement('a');
+    waFloat.className = 'whatsapp-float';
+    waFloat.href = 'https://wa.me/917285038337?text=Hello%20RK%20Tours%20%26%20Travels,%20I%20would%20like%20to%20book%20a%20trip!';
+    waFloat.target = '_blank';
+    waFloat.rel = 'noopener noreferrer';
+    waFloat.setAttribute('aria-label', 'Book on WhatsApp');
+    waFloat.innerHTML = '<i class="fab fa-whatsapp"></i><span>Book Now</span>';
+    document.body.appendChild(waFloat);
+  }
+});
+

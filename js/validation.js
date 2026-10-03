@@ -50,15 +50,31 @@ if (contactForm) {
       document.getElementById('messageGroup').classList.remove('error');
     }
 
-    // If valid, show success message
+    // If valid, open WhatsApp with formatted message
     if (isValid) {
+      var destinationEl = document.getElementById('destination');
+      var destinationVal = destinationEl ? destinationEl.value : '';
+
+      var formattedText = 'Hello RK Tours %26 Travels,%0A%0A' +
+        '*New Booking Inquiry*%0A' +
+        '👤 *Name:* ' + encodeURIComponent(name) + '%0A' +
+        '📞 *Phone:* ' + encodeURIComponent(phone) + '%0A' +
+        '✉️ *Email:* ' + encodeURIComponent(email) + '%0A';
+
+      if (destinationVal) {
+        formattedText += '📍 *Destination/Package:* ' + encodeURIComponent(destinationVal) + '%0A';
+      }
+
+      formattedText += '💬 *Message:* ' + encodeURIComponent(message);
+
+      var whatsappUrl = 'https://wa.me/917285038337?text=' + formattedText;
+
       document.getElementById('formSuccess').style.display = 'block';
       contactForm.reset();
 
-      // Hide success message after 5 seconds
-      setTimeout(function () {
-        document.getElementById('formSuccess').style.display = 'none';
-      }, 5000);
+      // Redirect directly to WhatsApp without popup blocking
+      window.location.href = whatsappUrl;
+
     }
   });
 
